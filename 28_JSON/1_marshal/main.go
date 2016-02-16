@@ -9,8 +9,8 @@ import (
 // Note what is and isn't exported.
 type Person struct {
 	First       string
-	Last        string
-	Age         int
+	Last        string `json:"-"`            // This prevents exporting to JSON
+	Age         int    `json:"wisdom score"` // These are tags
 	notExported int
 }
 
