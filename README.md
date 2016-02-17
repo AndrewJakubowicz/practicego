@@ -11,4 +11,3 @@ Simply to document my progress and work learning Go.
 #### What can you get out of it?
 - See some basics of Go.
 - Check out a topic you don't know much about.
-- Check out my very new blog [howtoGolang](www.howtogolang.com).
