@@ -26,3 +26,6 @@ func increment(s string) {
 	}
 	wg.Done()
 }
+
+// go run main.go
+// go run -race main.go
