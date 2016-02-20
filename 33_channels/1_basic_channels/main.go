@@ -7,6 +7,7 @@ import (
 
 var wg sync.WaitGroup
 
+// Imagine a channel like a relay race. Passing a baton.
 func main() {
 	c := make(chan int)
 	wg.Add(1)
