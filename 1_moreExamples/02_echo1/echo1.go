@@ -4,16 +4,15 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
-	var s, sep string
+	var s, sep string // s, sep := "",  ""
 	fmt.Println("File than ran called:", os.Args[0])
-	// s, sep := "",  ""  // This is an alternative of the above code.
-	// os.Args[0] is the name of the command itself.
 	for i := 1; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
-		sep = "+"
+		s += sep + strconv.Itoa(i) + ": " + os.Args[i]
+		sep = "\n"
 	}
 	fmt.Println(s)
 }
