@@ -16,13 +16,14 @@ func main() {
 			url = "http://" + url
 		}
 		resp, err := http.Get(url)
-		defer resp.Body.Close()
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
 			os.Exit(1)
 		}
+		fmt.Printf("Status: %s\n", resp.Status)
 		if _, err := io.Copy(os.Stdout, resp.Body); err != nil {
 			log.Fatal(err)
 		}
+		resp.Body.Close()
 	}
 }
